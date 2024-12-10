@@ -1,0 +1,48 @@
+.small-font {
+    -fx-font-size: 12px;
+}
+
+.small-font .h3{
+    -fx-font-size: 14px;
+}
+
+.small-font .h2{
+    -fx-font-size: 16px;
+}
+
+.small-font .h1{
+    -fx-font-size: 18px;
+}
+
+.medium-font {
+    -fx-font-size: 16px;
+}
+
+.medium-font .h3{
+    -fx-font-size: 18px;
+}
+
+.medium-font .h2{
+    -fx-font-size: 20px;
+}
+
+.medium-font .h1{
+    -fx-font-size: 22px;
+}
+
+.large-font {
+    -fx-font-size: 18px;
+}
+
+.large-font .h3{
+    -fx-font-size: 20px;
+}
+
+
+.large-font .h2{
+    -fx-font-size: 24px;
+}
+
+.large-font .h1{
+    -fx-font-size: 26px;
+}

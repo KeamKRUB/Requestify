@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.department.DepartmentRequestAcceptCertifierController">
+<children>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="960.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label styleClass="h1" text="Request Certifier">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label styleClass="h1" text="ผู้รับรองคำร้อง">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Line endX="758.3595581054688" endY="-6.942629697732627E-4" startX="-15.306856155395508" stroke="#c6c6c6">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Line>
+               </children>
+            </VBox>
+            <HBox prefHeight="32.0" prefWidth="763.0">
+               <children>
+                  <VBox prefHeight="32.0" prefWidth="676.0">
+                     <children>
+                        <Label styleClass="h2" text="เลือกเจ้าหน้าที่" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="461.0" spacing="10.0">
+                     <children>
+                        <TextField prefHeight="26.0" prefWidth="187.0" />
+                        <Button mnemonicParsing="false" styleClass="button2-theme" text="ค้นหา">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <TableView fx:id="departmentCertifierTableView" prefHeight="300.0" prefWidth="777.0" style="-fx-background-color: white;">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Line endX="758.3595581054688" endY="0.2928932309150696" startX="-15.306856155395508" startY="0.5858108997344971" stroke="#c6c6c6">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Line>
+            <VBox prefHeight="0.0" prefWidth="750.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label styleClass="h2" text="แนบเอกสาร (ใบคำร้องที่ลงนามแล้ว)" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="752.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onBrowseFileButtonClick" styleClass="button2-theme" text="Browse File" />
+                  <Label fx:id="fileNameLabel" text="fileNameLabel">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="752.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onSubmitButtonClick" styleClass="button-submit" text="Submit" />
+                  <Button mnemonicParsing="false" onAction="#onCancelButtonClick" styleClass="button-cancel" text="Cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>

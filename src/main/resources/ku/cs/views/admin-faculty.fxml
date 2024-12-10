@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.AdminFacultyController">
+   <children>
+            <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="960.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label styleClass="h1" text="Faculty Manage">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label styleClass="h1" text="จัดการคณะ">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Line endX="758.3595581054688" endY="-6.942629697732627E-4" startX="-15.306856155395508" stroke="#c6c6c6">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Line>
+               </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+            </VBox>
+            <HBox prefHeight="32.0" prefWidth="763.0">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="32.0" prefWidth="676.0">
+                     <children>
+                        <Label styleClass="h2" text="รายชื่อคณะ" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="461.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="searchTextFieldTextField" onAction="#onSearchButtonClick" prefWidth="187.0" />
+                        <Button mnemonicParsing="false" onAction="#onSearchButtonClick" styleClass="button2-theme" text="ค้นหา">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <TableView fx:id="adminFacultyTableView" prefHeight="300.0" prefWidth="777.0" styleClass="custom-table" />
+            <Line endX="758.3595581054688" endY="0.2928932309150696" startX="-15.306856155395508" startY="0.5858108997344971" stroke="#c6c6c6">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Line>
+            <VBox prefHeight="0.0" prefWidth="750.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label styleClass="h2" text="เพิ่มคณะ" />
+               </children>
+            </VBox>
+            <VBox prefHeight="25.0" prefWidth="750.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="20.0" prefWidth="150.0" spacing="50.0">
+                     <children>
+                  <VBox>
+                     <children>
+                              <Label styleClass="h3" text="รหัสคณะ" />
+                              <TextField fx:id="facultyIdTextField" onAction="#onAddButtonClick" prefWidth="150.0" promptText="FacultyID" style="-fx-background-radius: 5;" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                              <Label styleClass="h3" text="ชื่อคณะ" />
+                              <TextField fx:id="facultyNameTextField" onAction="#onAddButtonClick" prefWidth="150.0" promptText="Facultyname" style="-fx-background-radius: 5;" />
+                     </children>
+                  </VBox>
+                        <Button mnemonicParsing="false" onAction="#onAddButtonClick" styleClass="button2-theme" text="Add">
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox fx:id="mainLayout" spacing="5.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.user.ProfileController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+      <VBox alignment="TOP_CENTER" prefHeight="108.0" prefWidth="742.0">
+         <children>
+            <Circle fx:id="profileImage" fill="DODGERBLUE" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button mnemonicParsing="false" onAction="#onChangeImageClick" style="-fx-background-color: transparent;" text="Change Image" underline="true" />
+         </children>
+      </VBox>
+      <HBox fx:id="line1" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefHeight="18.0" prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label11" text="label11" />
+               </children>
+            </HBox>
+            <Label fx:id="label12" text="label12">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="line2" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label21" text="label21" />
+               </children>
+            </HBox>
+            <Label fx:id="label22" text="label22">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="line3" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label31" text="label31" />
+               </children>
+            </HBox>
+            <Label fx:id="label32" text="label32">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="line4" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label41" text="label41" />
+               </children>
+            </HBox>
+            <Label fx:id="label42" text="label42">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="line5" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label51" text="label51" />
+               </children>
+            </HBox>
+            <Label fx:id="label52" text="label52">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="line6" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label61" text="label61" />
+               </children>
+            </HBox>
+            <Label fx:id="label62" text="label62">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="line7" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label71" text="label71" />
+               </children>
+            </HBox>
+            <Label fx:id="label72" text="label72">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="line8" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox prefWidth="140.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="label81" text="label81" />
+               </children>
+            </HBox>
+            <Label fx:id="label82" text="label82">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="742.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="178.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="Old Password:" />
+               </children>
+            </HBox>
+            <TextField fx:id="oldPasswordTextField" promptText="old password">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Label fx:id="oldPasswordErrorLabel" text="oldPasswordErrorLabel" textFill="RED">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefWidth="178.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="New Password:" />
+               </children>
+            </HBox>
+            <TextField fx:id="newPasswordTextField" promptText="new password">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Label fx:id="newPasswordErrorLabel" text="newPasswordErrorLabel" textFill="RED">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="309.0">
+         <children>
+            <HBox prefHeight="26.0" prefWidth="178.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="Confirm Password:" />
+               </children>
+            </HBox>
+            <TextField fx:id="confirmPasswordTextField" promptText="confirm password">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Label fx:id="confirmPasswordErrorLabel" text="confirmPasswordErrorLabel" textFill="RED">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#onChangeButtonClick" styleClass="button-information" stylesheets="@../../../styles/global.css" text="Change" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="30.0" />
+   </padding>
+</VBox>

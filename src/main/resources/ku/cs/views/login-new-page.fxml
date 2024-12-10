@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="720.0" maxWidth="1080.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.user.LoginPageController">
+   <children>
+      <AnchorPane prefHeight="741.0" prefWidth="1080.0">
+         <children>
+            <ImageView fitHeight="727.0" fitWidth="1080.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/assets/Screenshot-2024-10-14-160909.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" layoutX="540.0" prefHeight="727.0" prefWidth="540.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="727.0" prefWidth="540.0" style="-fx-background-color: white;">
+                           <effect>
+                              <InnerShadow choke="0.29" height="137.76" offsetY="-10.0" radius="33.94" width="0.0">
+                                 <color>
+                                    <Color red="0.13358917832374573" green="0.2679550349712372" blue="0.6710526347160339" opacity="0.1899999976158142" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </Pane>
+                        <ImageView fitHeight="257.0" fitWidth="540.0" layoutY="76.0" opacity="0.31" smooth="false">
+                           <image>
+                              <Image url="@../../../images/assets/pngtree-vector-abstract-elegant-colorful-flowing-blue-color-wave-lines-isolated-on-png-image_4740215.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" fillWidth="false" prefHeight="727.0" prefWidth="540.0">
+                           <children>
+                              <Label text="LOGIN" textFill="#46afff">
+                                 <font>
+                                    <Font name="System Bold" size="42.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="50.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <Lighting>
+                                       <light>
+                                       </light>
+                                       <bumpInput>
+                                          <Glow level="1.0" />
+                                       </bumpInput>
+                                    </Lighting>
+                                 </effect>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="250.0" text="Username" textFill="#0f2d4d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="usernameField" onAction="#onLoginButtonClick" prefHeight="27.0" prefWidth="250.0" promptText="username" style="-fx-background-color: transparent; -fx-border-color: lightblue; -fx-border-width: 0 0 2; -fx-border-radius: 5;">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <Label fx:id="usernameErrorLabel" prefHeight="27.0" prefWidth="251.0" text="usernameErrorLabel" textFill="RED">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="249.0" text="Password" textFill="#0f2d4d">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <StackPane prefWidth="200.0">
+                                       <children>
+                                          <PasswordField fx:id="passwordField" onAction="#onLoginButtonClick" prefHeight="37.0" prefWidth="178.0" promptText="password" style="-fx-background-color: transparent; -fx-border-width: 0 0 2; -fx-border-color: lightblue;">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </PasswordField>
+                                          <TextField fx:id="passwordTextField" prefHeight="25.0" prefWidth="248.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: lightblue; -fx-border-width: 0 0 2;" visible="false">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </StackPane>
+                                    <VBox alignment="CENTER" style="-fx-border-width: 0 0 2; -fx-border-color: lightblue;">
+                                       <children>
+                                          <Button fx:id="showButton" mnemonicParsing="false" onAction="#onShowButtonClick" style="-fx-background-color: transparent;" text="show" textFill="#007cf8">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="passwordErrorLabel" prefHeight="27.0" prefWidth="249.0" text="passwordErrorLabel" textFill="RED">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="16.0" prefWidth="99.0" styleClass="login-button" stylesheets="@../../../styles/global.css" text="Login">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <DropShadow height="6.0" offsetX="1.0" offsetY="2.0" radius="2.5" width="6.0">
+                                       <color>
+                                          <Color opacity="0.1335877925157547" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                              <HBox alignment="CENTER" prefHeight="64.0" prefWidth="294.0">
+                                 <children>
+                                    <Label text="Don't have an account?">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button mnemonicParsing="false" onAction="#onRegisterButtonClick" style="-fx-background-color: transparent;" text="register" textFill="#3561ff" underline="true">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <Label layoutX="37.0" layoutY="27.0" text="Requestify" textFill="WHITE">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="90.0" prefHeight="48.0" prefWidth="269.0" text="Request Management System" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="294.0" layoutY="35.0" smooth="false">
+               <image>
+                  <Image url="@../../../images/assets/seedling-2163773_1280.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="264.0" fitWidth="405.0" layoutX="15.0" layoutY="259.0" opacity="0.4" smooth="false">
+               <image>
+                  <Image url="@../../../images/assets/pngtree-flock-of-birds-silhouettes-flying-birds-clipart-png-image_8286153.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

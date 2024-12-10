@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.AdminAccountController">
+         <children>
+            <VBox alignment="TOP_CENTER">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label styleClass="h1" text="Account Manage">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label styleClass="h1" text="จัดการบัญชีผู้ใช้งาน">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Line endX="758.3595581054688" endY="-6.942629697732627E-4" startX="-15.306856155395508" stroke="#c6c6c6">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Line>
+               </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+            </VBox>
+            <HBox prefHeight="32.0" prefWidth="748.0">
+               <children>
+                  <VBox prefHeight="32.0" prefWidth="676.0">
+                     <children>
+                        <Label styleClass="h2" text="รายชื่อผู้ใช้งาน" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="872.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="searchTextField" onAction="#onSearchButtonClick" prefHeight="26.0" prefWidth="187.0" />
+                        <Button mnemonicParsing="false" onAction="#onSearchButtonClick" styleClass="button2-theme" text="ค้นหา">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Button>
+                        <MenuButton fx:id="roleMenuButton" mnemonicParsing="false" text="Role">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="ทั้งหมด" />
+                            <MenuItem mnemonicParsing="false" text="นิสิต" />
+                              <MenuItem mnemonicParsing="false" text="เจ้าหน้าที่ภาควิชา" />
+                              <MenuItem mnemonicParsing="false" text="เจ้าหน้าที่คณะ" />
+                              <MenuItem mnemonicParsing="false" text="อาจารย์ที่ปรึกษา" />
+                          </items>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+      <HBox>
+         <children>
+            <TableView fx:id="adminStudentTableView" prefHeight="402.0" prefWidth="403.0" styleClass="custom-table" />
+            <VBox alignment="CENTER" fillWidth="false" prefHeight="402.0" prefWidth="342.0" spacing="30.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Circle id="request-to-label" fx:id="profileBackground" fill="WHITE" radius="90.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="profileImage" fill="DODGERBLUE" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </StackPane>
+                  <VBox spacing="10.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Role:">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <Label fx:id="userRole" alignment="CENTER" contentDisplay="CENTER" styleClass="h3" text="Role" textAlignment="CENTER" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Username">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <Label fx:id="usernameText" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" styleClass="h3" text="username" textAlignment="CENTER" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label fx:id="userRole1" alignment="CENTER" contentDisplay="CENTER" styleClass="h3" text="Id:" textAlignment="CENTER" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <Label fx:id="userId" text="Id" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label fx:id="userRole2" alignment="CENTER" contentDisplay="CENTER" styleClass="h3" text="Name:" textAlignment="CENTER" />
+                              <Label fx:id="userName" text="name" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="onAvailableButton" mnemonicParsing="false" onAction="#onAvailableButtonClick" prefHeight="25.0" prefWidth="80.0" styleClass="button-cancel" text="ระงับสิทธิ์">
+                                 <effect>
+                                    <DropShadow height="6.34" offsetX="2.0" offsetY="2.0" radius="2.67" width="6.34">
+                                       <color>
+                                          <Color opacity="0.3854961693286896" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Circle fx:id="statusColor" fill="#00f808" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                                          <Label fx:id="userLoggedIn" text="กำลังใช้งาน" textFill="#04b916" />
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="timeLabel" text="time" textFill="#04b916" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+         </children>
+      </VBox>

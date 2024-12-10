@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.department.DepartmentStudentController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="960.0">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+            <children>
+                <Label styleClass="h1" text="Department Student">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label styleClass="h1" text="นิสิตในภาควิชา">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Line endX="758.3595581054688" endY="-6.942629697732627E-4" startX="-15.306856155395508" stroke="#c6c6c6">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Line>
+            </children>
+        </VBox>
+        <HBox prefHeight="32.0" prefWidth="763.0">
+            <children>
+                <VBox prefHeight="32.0" prefWidth="676.0">
+                    <children>
+                        <Label styleClass="h2" text="รายชื่อนิสิต" />
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="461.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="searchTextField" onAction="#onSearchButtonClick" prefHeight="26.0" prefWidth="187.0">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin></TextField>
+                        <Button mnemonicParsing="false" onAction="#onSearchButtonClick" styleClass="button2-theme" text="ค้นหา">
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <TableView fx:id="departmentStudentTableView" prefHeight="260.0" prefWidth="777.0" styleClass="custom-table">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Line endX="758.3595581054688" endY="0.2928932309150696" startX="-15.306856155395508" startY="0.5858108997344971" stroke="#c6c6c6">
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </Line>
+        <VBox prefHeight="0.0" prefWidth="750.0">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+            <children>
+                <Label styleClass="h2" text="เพิ่มนิสิต" />
+            </children>
+        </VBox>
+        <VBox prefHeight="25.0" prefWidth="750.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <children>
+                <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="150.0" spacing="30.0">
+                    <children>
+                        <VBox prefWidth="150.0">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <children>
+                                <Label styleClass="h3" text="รหัสนิสิต" />
+                                <TextField fx:id="studentId" promptText="Student ID" style="-fx-background-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label styleClass="h3" text="ชื่อ" />
+                                <TextField fx:id="studentFirstName" promptText="Fisrtname" style="-fx-background-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label prefWidth="150.0" styleClass="h3" text="นามสกุล" />
+                                <TextField fx:id="studentLastName" promptText="Lastname" style="-fx-background-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="150.0" spacing="30.0">
+                    <children>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label styleClass="h3" text="อีเมลล์" />
+                                <TextField fx:id="studentEmail" prefWidth="150.0" promptText="Email" style="-fx-background-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox>
+                            <children>
+                                <Label prefWidth="150.0" styleClass="h3" text="อาจารย์ที่ปรึกษา" />
+                                <MenuButton fx:id="advisorMenuButton" mnemonicParsing="false" prefWidth="150.0" text="ยังไม่เลือก" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <children>
+                                <Label styleClass="h3" text="ภาควิชา" />
+                                <TextField fx:id="studentDepartment" disable="true" editable="false" style="-fx-background-radius: 5; -fx-background-color: #dfdfdf;" text="วิทยาการคอมพิวเตอร์" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="678.0">
+                    <children>
+                        <VBox prefHeight="27.0" prefWidth="101.0">
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#onAddButtonClick" styleClass="button2-theme" text="Add">
+                                    <padding>
+                                        <Insets left="20.0" right="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" />
+            </padding>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </VBox>
+    </children>
+</VBox>

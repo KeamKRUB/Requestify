@@ -1,0 +1,98 @@
+/* Button */
+.login-button {
+    -fx-border-color: #2480ff;
+    -fx-border-radius: 2;
+    -fx-text-fill: #2480ff;
+    -fx-background-color: transparent;
+    -fx-border-radius: 5;
+}
+
+.login-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #00b2ff;
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.button-information {
+    -fx-alignment: center;
+    -fx-background-color: #188adf;
+    -fx-background-radius: 4px;
+    -fx-border-width: 0;
+    -fx-text-fill:  white;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 4, 0.0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.button-information:hover {
+    -fx-background-color: #056cb9;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 8, 0.0, 0, 4);
+    -fx-translate-y: -2px;
+}
+
+.button-information:pressed {
+    -fx-translate-y: 2px;
+}
+
+.button-cancel {
+    -fx-alignment: center;
+    -fx-background-color: #ed3838;
+    -fx-background-radius: 4px;
+    -fx-border-width: 0;
+    -fx-text-fill:  white;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 4, 0.0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.button-cancel:hover {
+    -fx-background-color: #dd0707;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 8, 0.0, 0, 4);
+    -fx-translate-y: -2px;
+}
+
+.button-cancel:pressed {
+    -fx-translate-y: 2px;
+}
+
+.button-confirm {
+    -fx-alignment: center;
+    -fx-background-color:  #46d419;
+    -fx-background-radius: 4px;
+    -fx-border-width: 0;
+    -fx-text-fill:  white;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 4, 0.0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.button-confirm:hover {
+    -fx-background-color: #2a9707;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 8, 0.0, 0, 4);
+    -fx-translate-y: -2px;
+}
+
+.button-confirm:pressed {
+    -fx-translate-y: 2px;
+}
+
+
+.button-change-password-cancel {
+    -fx-alignment: center;
+    -fx-background-color: #e62424;
+    -fx-background-radius: 4px;
+    -fx-border-width: 0;
+    -fx-text-fill:  white;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 4, 0.0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.button-change-password-cancel:hover {
+    -fx-background-color: #c60c0c;
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 8, 0.0, 0, 4);
+    -fx-translate-y: -2px;
+}
+
+.button-change-password-cancel:pressed {
+    -fx-translate-y: 2px;
+}
+

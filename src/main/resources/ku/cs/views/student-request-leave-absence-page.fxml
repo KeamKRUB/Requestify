@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.student.StudentRequestLeaveAbsenceController">
+   <content>
+            <VBox alignment="TOP_CENTER" fillWidth="false" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+            <Label id="ยื่นใบคำร้อง" styleClass="h1" text="ยื่นใบคำร้อง" />
+            <Label id="เลือก" styleClass="h1" text="กรอกข้อมูลเพิ่มเติม" />
+                  <VBox id="upper" alignment="CENTER" fillWidth="false" prefHeight="225.0" prefWidth="838.0">
+                     <children>
+                        <VBox prefHeight="89.0" prefWidth="777.0">
+                           <children>
+                              <Label styleClass="h2" text="ใบคำร้อง" />
+                              <VBox id="requestLabel" alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="777.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                                 <children>
+                                    <Label id="option" fx:id="requestTopicLabel" text="requestTopicLabel" textFill="#797979">
+                                       <padding>
+                                          <Insets left="15.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="93.0" prefWidth="777.0">
+                           <children>
+                              <Label styleClass="h2" text="ความประสงค์" />
+                              <VBox id="requestOptionLabel" alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="777.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                                 <children>
+                                    <Label id="option" fx:id="requestTypeLabel" text="requestTypeLabel" textFill="#797979">
+                                       <padding>
+                                          <Insets left="15.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <Line endX="675.2929077148438" endY="0.2928932309150696" startX="-100.0" stroke="#c6c6c6" />
+                     </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+                  </VBox>
+            <VBox id="reason" alignment="BOTTOM_LEFT" layoutX="62.0" layoutY="549.0" prefHeight="233.0" prefWidth="777.0">
+               <children>
+                  <Label styleClass="h2" text="สาเหตุที่ลา" />
+                  <TextField fx:id="notationTextField" alignment="TOP_LEFT" prefHeight="204.0" prefWidth="777.0" promptText="สาเหตุที่ลา....." style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="35.0" prefWidth="779.0" spacing="8.0">
+                     <children>
+                              <Label text="มีความประสงค์ลาพักการศึกษาเป็นจำนวน" />
+                        <TextField fx:id="amountTextField1" alignment="CENTER" prefHeight="20.0" prefWidth="40.0" />
+                        <Label layoutX="10.0" layoutY="20.0" text="ภาคการศึกษา " />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="8.0">
+                     <children>
+                        <Label text="ตั้งแต่ภาค" />
+                        <TextField fx:id="amountTextField2" prefHeight="10.0" prefWidth="40.0" />
+                        <Label text="ปีการศึกษา" />
+                        <TextField fx:id="amountTextField3" prefHeight="10.0" prefWidth="76.0" />
+                        <Label text="ถึงภาค" />
+                        <TextField fx:id="amountTextField4" prefHeight="10.0" prefWidth="40.0" />
+                        <Label text="ปีการศึกษา" />
+                        <TextField fx:id="amountTextField5" prefHeight="10.0" prefWidth="76.0" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="39.0" prefWidth="779.0" spacing="8.0">
+                     <children>
+                        <Label text="อนึ่ง ข้าพเจ้าได้ลงทะเบียนไว้ในภาค" />
+                        <TextField fx:id="amountTextField6" prefHeight="20.0" prefWidth="40.0" />
+                        <Label layoutX="10.0" layoutY="20.0" text="ปีการศึกษา" />
+                        <TextField fx:id="amountTextField7" layoutX="199.0" layoutY="20.0" prefHeight="10.0" prefWidth="76.0" />
+                        <Label layoutX="249.0" layoutY="23.0" text="ดังนี้" />
+                        <Label fx:id="errorYearLabel" alignment="CENTER" prefHeight="20.0" prefWidth="213.0" text="errorYearLabel" textFill="#ff4646" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+                  <VBox>
+                     <children>
+                        <VBox id="ku1 title" alignment="CENTER" fillWidth="false">
+                           <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="780.0">
+                           <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="20.0" prefWidth="202.0" text="รหัสวิชา ( Course Code )" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="194.0" text="ชื่ออาจารย์ประจำวิชา">
+                                 <HBox.margin>
+                                    <Insets left="65.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" fillWidth="false">
+                           <children>
+                                    <HBox id="listHeader" alignment="TOP_CENTER" prefHeight="13.0" prefWidth="778.0" spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="subjectIdTextField" prefHeight="29.0" prefWidth="282.0" promptText="Subject ID" style="-fx-background-color: white;" />
+                                          <TextField fx:id="lecturerNameTextField" prefHeight="29.0" prefWidth="301.0" promptText="Lecturer's Name" style="-fx-background-color: white;" />
+                                          <Button mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="25.0" prefWidth="52.0" styleClass="button2-theme" text="Add">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                       </children>
+                                    </HBox>
+                              <HBox prefHeight="34.0" prefWidth="661.0">
+                                 <children>
+                                    <Label fx:id="errorIdLabel" prefHeight="17.0" prefWidth="291.0" text="errorIdLabel" textFill="#ff4646" />
+                                    <Label fx:id="errorNameLabel" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="293.0" text="errorNameLabel" textFill="#ff4646" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                           </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                        </VBox>
+                        <VBox id="ku1" alignment="TOP_CENTER" prefWidth="777.0" style="-fx-background-color: white; -fx-background-radius: 5;" />
+                     </children>
+                  </VBox>
+            <TableView fx:id="requestSubjectTableView" prefHeight="300.0" prefWidth="777.0" styleClass="custom-table" />
+            <Label fx:id="errorListLabel" text="errorListLabel" textFill="#ff4646">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Line endX="675.2929077148438" endY="0.2928932309150696" startX="-100.0" stroke="#c6c6c6">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Line>
+            <HBox prefHeight="67.0" prefWidth="776.0">
+               <children>
+                  <VBox id="BackButton" alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="779.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onBackButtonClick" styleClass="button-cancel" text="Back" />
+                     </children>
+                  </VBox>
+                  <VBox id="ConfirmButton" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="779.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onConfirmButtonClick" styleClass="button-confirm" text="Confirm" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+               </children>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>

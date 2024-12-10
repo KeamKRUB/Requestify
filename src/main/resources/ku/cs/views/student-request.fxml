@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.student.StudentRequestController">
+   <content>
+            <VBox alignment="TOP_CENTER" fillWidth="false" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <VBox id="upper" alignment="CENTER" fillWidth="false">
+                     <children>
+                        <VBox layoutX="41.0" layoutY="20.0">
+                           <children>
+                        <VBox>
+                           <children>
+                              <HBox fx:id="testHBox">
+                                 <children>
+                                          <Label styleClass="h1" text="ยินดีต้อนรับ, " />
+                                    <HBox prefHeight="17.0" prefWidth="682.0">
+                                       <children>
+                                          <Label fx:id="nameTextLabel" styleClass="h1" text="nameTextLabel" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                                    <HBox alignment="CENTER" prefHeight="41.0" prefWidth="283.0" spacing="10.0">
+                                       <children>
+                                          <Line endX="417.577880859375" endY="0.5863518118858337" layoutX="-65.0" layoutY="32.0" startX="341.28497314453125" startY="0.5857864618301392" stroke="#c6c6c6" />
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="157.0">
+                                       <children>
+                                          <Label styleClass="h2" text="รายการคำร้อง" />
+                                       </children>
+                                    </HBox>
+                                          <Line endX="387.2764587402344" endY="1.1730856895446777" startX="-7.5676374435424805" startY="1.1724021434783936" stroke="#c6c6c6" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="116.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#onAddButtonClick" styleClass="button-theme" text="+ เพิ่มคำร้อง" />
+                                       </children>
+                                    </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="560.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="26.0" prefWidth="710.0" spacing="10.0">
+                                       <children>
+                                          <Label text="🔍" />
+                                          <TextField fx:id="searchTextField" onAction="#onSearchButtonClick" prefHeight="25.0" prefWidth="429.0" promptText="ค้นหาคำร้อง" style="-fx-background-color: white;" />
+                                          <Button mnemonicParsing="false" onAction="#onSearchButtonClick" styleClass="button2-theme" text="ค้นหา" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="371.0" spacing="10.0">
+                                       <children>
+                                          <Label text="สถานะ:" />
+                                          <MenuButton fx:id="statusMenuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="ทั้งหมด" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="30.0" right="20.0" />
+                           </padding>
+                        </VBox>
+                              <TableView fx:id="studentRequestTableView" focusTraversable="false" maxHeight="581.0" prefHeight="410.0" prefWidth="777.0" styleClass="custom-table">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <Line endX="677.1654663085938" endY="-2.5355331897735596" opacity="0.0" startX="-82.62744140625" startY="-2.535533905029297" stroke="#c6c6c6">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+                  <HBox prefWidth="776.0">
+                     <children>
+                        <VBox id="BackButton" alignment="CENTER_LEFT" prefWidth="779.0" />
+                        <VBox id="ConfirmButton" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefWidth="779.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onReloadButtonClick" styleClass="button2-theme" text="Reload" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
